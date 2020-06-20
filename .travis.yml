@@ -1,0 +1,11 @@
+language: python
+
+script:
+  - python -m pytest -v 
+deploy:
+  provider: heroku
+  api_key: 
+    secure: 65638d4b-5aa8-4c15-a309-4dc88345388c
+  app: less2
+  on:
+    repo: Almaz2/l2/less2
