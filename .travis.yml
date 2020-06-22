@@ -2,7 +2,6 @@ language: python
 
 stages:
   - Static Analysis
-  - Test
 pylint:
   stage: Static Analysis
   allow_failure: true
