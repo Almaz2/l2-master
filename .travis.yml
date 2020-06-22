@@ -1,7 +1,7 @@
 language: python
 
 script:
-  - bandit -r generator
+  - bandit -r generator.py
 deploy:
   provider: heroku
   api_key: 
