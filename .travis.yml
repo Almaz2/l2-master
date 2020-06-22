@@ -1,12 +1,9 @@
 language: python
 
-stages:
-  - Static Analysis
-pylint:
-  stage: Static Analysis
-  allow_failure: true
-  script:
-  - pylint -d C0301 bild/*.py
+install:
+  - pip install flake8
+script:
+  - flake8 . --max-line-length=120
 deploy:
   provider: heroku
   api_key: 
