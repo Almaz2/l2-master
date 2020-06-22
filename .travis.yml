@@ -1,7 +1,13 @@
 language: python
 install: pip install pylint
-script:
-  - pytest --pylint
+stages:
+  - Static Analysis
+  - Test
+pylint:
+  stage: Static Analysis
+  allow_failure: true
+  script:
+  - pylint -d C0301 bild/*.py
 deploy:
   provider: heroku
   api_key: 
