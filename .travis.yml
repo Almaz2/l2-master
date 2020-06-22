@@ -1,5 +1,7 @@
 language: python
-install: pip install pylint
+install: 
+- pip install -r requirements/test.txt
+- pip install pylint
 stages:
   - Static Analysis
   - Test
